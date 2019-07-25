@@ -29,7 +29,7 @@ pip install -r requirements.txt
 * A small change in niftynet is required for our multi-modal application.
 ```bash
 cp ./utils/user_parameters_custom.py ./uhved_python/lib/python3.6/site-packages/niftynet/utilities
-export PATH=$PATH:$(pwd)/extensions/
+export PYTHONPATH=$PATH:$(pwd)/extensions/:$PYTHONPATH
 ```
 
 * BraTS 2018 dataset. Data can be downloaded from http://braintumorsegmentation.org/
