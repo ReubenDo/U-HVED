@@ -6,12 +6,12 @@ This implementation is based on NiftyNet and Tensorflow.
 If you use any resources in this repository, please cite the following papers:
 
 * [1] Reuben Dorent, Samuel Joutard, Marc Modat, Sebastien Ourselin, Tom Vercauteren. "AHetero-Modal Variational Encoder-Decoder for
-Joint Modality Completion and Segmentation." In MICCAI 2019.
+Joint Modality Completion and Segmentation." In MICCAI 2019. https://arxiv.org/abs/1907.11150
 * [2] Eli Gibson*, Wenqi Li*, Carole Sudre, Lucas Fidon, Dzhoshkun I. Shakir, Guotai Wang, Zach Eaton-Rosen, Robert Gray, Tom Doel, Yipeng Hu, Tom Whyntie, Parashkev Nachev, Marc Modat, Dean C. Barratt, Sébastien Ourselin, M. Jorge Cardoso^, Tom Vercauteren^.
 "NiftyNet: a deep-learning platform for medical imaging." Computer Methods and Programs in Biomedicine, 158 (2018): 113-122. https://arxiv.org/pdf/1709.03485
 ![Modality reconstruction and hetero-modal segmentation](./data/recoandseg.png)
 
-An example of brain tumor segmentation result.
+Example of FLAIR and T1 completion and tumour segmentation given a subsetof modalities as input. Green: edema; Red: non-enhancing core; Blue: enhancing core.
 
 # Requirements
 * A CUDA compatable GPU with memory not less than 12GB is recommended for training. For testing only, a smaller GPU should be suitable.
