@@ -29,6 +29,17 @@ def replace_values_seg(img_array):
         img_array[img_array == labels[k]]= k+1
     return img_array
 
+def sup_128(xmin,xmax):
+    
+    if xmax-xmin<128:
+        ecart = int((128-(xmax-xmin))/2)
+        xmax = xmax+ecart+1
+        xmin = xmin-ecart
+    if xmin<0:
+        xmax-=xmin
+        xmin=0
+    return xmin,xmax
+
 
 def crop_zeros(img_array):
     if len(img_array.shape) == 4:
