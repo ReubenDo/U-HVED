@@ -1,4 +1,10 @@
 """
+Created on Wed Oct 14 17:38:59 2020
+
+@author: reubendo
+"""
+
+"""
 Adapted from https://github.com/taigw/brats17/blob/master/util/data_process.py
 
 This script renames BRATS dataset to OUTPUT_path,
@@ -23,6 +29,15 @@ import os
 import nibabel
 import numpy as np
 import argparse
+OUTPUT_AFFINE = np.array(
+    [[-1, 0, 0, 0],
+     [0, -1, 0, 239],
+     [0, 0, 1, 0],
+     [0, 0, 0, 1]])
+mod_names17 = ['flair', 't1', 't1ce', 't2']
+mod_names15 = ['Flair', 'T1', 'T1c', 'T2']
+
+labels=[1,2,4]
 
 def replace_values_seg(img_array):
     for k in range(3):
