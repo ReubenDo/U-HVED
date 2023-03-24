@@ -1,2 +1,2 @@
-tensorflow-gpu==1.12.2
+tensorflow-gpu==2.12.0
 niftynet==0.5.0 
